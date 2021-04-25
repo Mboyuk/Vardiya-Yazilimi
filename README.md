@@ -2,6 +2,8 @@ Tasarlayan:
 **Adı Soyadı** MEHMET BÖYÜK 
 **Öğrenci No** 1030516450
 
+# Vardiya Planlama Yazılımı
+--Kullanıcıların ne zaman, kaç saat, hangi departmanda çalışacaklarını kontrol edebilecekleri yazılım. 
  
 
 # Kullanılan Araçlar
