@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet"  href="/css/home.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+
+
+
+</head>
+<body>
+    <div class="nav1" >
+        <nav class="navbar navbar-light">
+            <a href="#" class="navbar-brand">Navbar</a>
+            <form class="form-inline">
+        
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter1">
+                    Kayıt Ol
+                  </button>
+                <button type="button" class="btn btn-primary ml-2 " data-toggle="modal" data-target="#exampleModalCenter">
+                    Oturum Aç
+                  </button>
+                  
+            </form>
+          </nav>
+    </div>
+
+    
+   <!-- OTURUM AÇ -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form id="formOturumAc" method="POST">
+                    <div class="form-group">
+                        <label for="oturumAcKullaniciAdi">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" id="oturumAcKullaniciAdi" name="oturumAcKullaniciAdi" placeholder="Kullanıcı Adınızı Giriniz">
+                         
+                    </div>
+                    
+                    <div class="form-group">
+                          <label for="oturumAcSifre">Şifre</label>
+                          <input type="password" class="form-control" id="oturumAcSifre" name="oturumAcSifre" placeholder="Şifre Giriniz">
+                    </div>                              
+               
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>   
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit"  class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+        </div>
+    </div>
+
+    <!-- kayıt ol -->
+    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form id="formKayitOl">
+                    <div class="form-group">
+                        <label for="kayitOlAd">Ad</label>
+                        <input type="text" class="form-control" id="kayitOlAd" placeholder="Adınızı Giriniz">
+                  </div> 
+                  <div class="form-group">
+                    <label for="kayitOlSoyAd">Soyad</label>
+                    <input type="text" class="form-control" id="kayitOlSoyAd" placeholder="Soyadınızı Giriniz">
+                    </div> 
+                    <div class="form-group">
+                        <label for="kayitOlKullanıciAdi">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" id="kayitOlKullanıciAdi" placeholder="Kullanıcı Adınızı Giriniz">
+                         
+                    </div>
+                    
+                    <div class="form-group">
+                          <label for="kayitOlSifre">Şifre</label>
+                          <input type="password" class="form-control" id="kayitOlSifre" placeholder="Şifre Giriniz">
+                    </div> 
+                                
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>   
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+        
+
+    
+    <!-- <div class="container1">
+	
+        <h1>SVG Animated Birds</h1>
+        
+        
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
+        
+        
+        <div class="bird-container bird-container--two">
+            <div class="bird bird--two"></div>
+        </div>
+        
+        <div class="bird-container bird-container--three">
+            <div class="bird bird--three"></div>
+        </div>
+        
+        <div class="bird-container bird-container--four">
+            <div class="bird bird--four"></div>
+        </div>
+        
+    </div> -->
+    
+
+    
+    <script src="/js/bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+</body>
+</html>

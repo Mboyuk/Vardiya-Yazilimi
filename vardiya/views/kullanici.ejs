@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çalışan</title>
+    <link rel="stylesheet"  href="giris.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+
+</head>
+<body>
+
+    <%- include("./inc/navbar");%>
+
+    <%const date=new Date();%>
+
+    <%const gun=date.getDate();%>
+    <%const ay=date.getMonth()+1%>
+    <%const str1=gun+"/0"+ay%>
+    <%const str2=gun+1+"/0"+ay%>
+    <%const str3=gun+2+"/0"+ay%>
+    <%const str4=gun+3+"/0"+ay%>
+    <%const str5=gun+4+"/0"+ay%>
+    <%const str6=gun+5+"/0"+ay%>
+    <%const str7=gun+6+"/0"+ay%>
+
+
+    <div class="container kullaniciTable">
+        <table class="table table-bordered" id="documentTable">
+            <thead>
+              <tr>
+                <th scope="col">Çalışan Adı/Bölüm</th>
+                <th scope="col"><%=date.getDate();%>/<%=date.getMonth()+1;%></th>
+                <th scope="col"><%=date.getDate()+1;%>/<%=date.getMonth()+1;%></th>
+                <th scope="col"><%=date.getDate()+2;%>/<%=date.getMonth()+1;%></th>
+                <th scope="col"><%=date.getDate()+3;%>/<%=date.getMonth()+1;%></th>
+                <th scope="col"><%=date.getDate()+4;%>/<%=date.getMonth()+1;%></th>
+                <th scope="col"><%=date.getDate()+5;%>/<%=date.getMonth()+1;%></th>
+                <th scope="col"><%=date.getDate()+6;%>/<%=date.getMonth()+1;%></th>
+                
+              </tr>
+            </thead>
+            <tbody>
+             <tr >
+                 <td>
+                   <p>İsim: <%=user.name%></p> 
+                    <p>Pozisyon: <%=user.bolum%></p> 
+                   
+                 </td>
+                    <td>
+                        
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str1) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                    <td>
+                         
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str2) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                    <td>
+                         
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str3) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                    <td>
+                         
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str4) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                    <td>
+                         
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str5) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                    <td>
+                         
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str6) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                    <td>
+                        <% for(var i=0; i <= user.bat.length; i++) { %>
+                            <%if(user.tarih[i]===str7) {%>
+                                <%=user.bat[i]%> -- 
+                                <%=user.bat2[i]%>
+                                <br>
+                                <%}%>
+                            <% } %>
+                    </td>
+                
+                </tr>
+          
+            </tbody>
+          </table>
+    </div>
+   
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+
+</body>
+</html>

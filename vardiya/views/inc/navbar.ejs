@@ -1,0 +1,36 @@
+
+    <div class="nav1 sticky-top fixed-top " >
+        
+        <nav class="navbar navbar-light">
+            <a href="/giris" class="navbar-brand"><i style="color: yellow;"  class="far fa-clock ml-3"></i>
+                 <span style="color: white; font-size: 1.7rem; ">Vardiya Uzmanı</span></a>
+                 
+            <form class="form-inline">
+        
+                
+                   
+               
+                   
+                <%if(userm){%>
+
+
+                <a  style="color: white ; text-decoration: none;" href="/logout"> 
+                    <button style="background-color: #F8C150;" type="button" class="btn btn-warning ml-2 " data-toggle="modal" data-target="#exampleModalCenter">
+                     Oturum Kapat
+                </button></a> 
+                <%}else{%>
+                    <a style="color: white; text-decoration: none;" href="/kayit">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter1">
+                            Kayıt Ol
+                        </button>
+                    </a>
+                    <a style="color: white; text-decoration: none;" href="/oturumAc"> 
+                        <button style="background-color: #F8C150;" type="button" class="btn btn-warning ml-2 " data-toggle="modal" data-target="#exampleModalCenter">
+                         Oturum Aç
+                    </button></a> 
+                    <%}%>
+               
+                  
+            </form>
+          </nav>
+    </div>

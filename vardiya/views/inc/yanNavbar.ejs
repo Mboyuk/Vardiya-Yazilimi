@@ -1,0 +1,51 @@
+<div class="d-flex" id="wrapper">
+
+   
+
+  <!-- Sidebar -->
+   <div class="bg-light border-right" id="sidebar-wrapper">
+      <a href="#" class="navbar-brand"><i style="color: blue; " class="fas fa-laptop-code pl-4 "></i>
+        <span style="color: black; font-size: 1.7rem; ">Vardiya</span></a>
+      <div class="list-group list-group-flush">
+      <a href="#" class="list-group-item list-group-item-action bg-light">Vardiya Programı</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Çalışanlar</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Vardiyalar</a>
+      <a href="#" class="list-group-item list-group-item-action bg-light">Pozisyonlar</a>
+      
+      </div>
+    
+       
+    </div>
+    <div class="nav1 sticky-top fixed-top " >
+     
+      <nav class="navbar navbar-light">
+        <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
+          <form id="kayitOturum" class="form-inline">
+                  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter1">
+                    <a style="color: white; text-decoration: none;" href="kayit">Kayıt Ol</a> 
+
+                  </button>
+
+                      
+                <%if(userm){%>
+
+
+                <a style="color: white; text-decoration: none;" href="/logout"> 
+                    <button type="button" class="btn btn-primary ml-2 " data-toggle="modal" data-target="#exampleModalCenter">
+                     Oturum Kapat
+                </button></a> 
+                <%}else{%>
+                    <a style="color: white; text-decoration: none;" href="/oturumAc"> 
+                        <button type="button" class="btn btn-primary ml-2 " data-toggle="modal" data-target="#exampleModalCenter">
+                         Oturum Aç
+                    </button></a> 
+                    <%}%>
+               
+                
+          </form>
+        </nav>
+  </div>
+  
+  <!-- /#sidebar-wrapper -->
+
+</div>

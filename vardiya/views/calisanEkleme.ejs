@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çalışan Ekleme</title>
+    <link rel="stylesheet" href="/simple-sidebar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+
+</head>
+<body>
+    
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+     <div class="bg-light border-right" id="sidebar-wrapper">
+        <a href="#" class="navbar-brand"><i style="color: yellow ;"  class="far fa-clock ml-3"></i>
+          <span style="color: white; font-size: 1.7rem; ">Vardiya Uzmanı</span></a>
+        <div class="list-group list-group-flush">
+          <div id="secenekler">
+            <a href="/yonetici" class="list-group-item list-group-item-action bg-light">Vardiya Programı</a>
+            <a href="/yonetici/calisanlar" class="list-group-item list-group-item-action bg-light">Çalışanlar</a>
+            <a href="../vardiyaEkleme" class="list-group-item list-group-item-action bg-light">Vardiya Planlama</a>
+            
+          </div>
+       
+        </div>       
+
+      </div>
+     
+      <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="ustNavbar">
+          <button class="btn btn-warning" id="menu-toggle"><i class="fas fa-bars"></i></button>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+             
+
+             <%if(userm){%>
+
+              <li>
+                <div class="ml-2  rounded" style="background-color: blue;">
+                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <span style="color: white;"><%=userm.name%> </span> <i style="color: rgb(27, 228, 27);" class="fas fa-sign-in-alt"></i>
+                 </a>
+                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  
+                  
+                  
+                   <a class="dropdown-item" href="/logout"><span>Oturum Kapat</span> </a>
+                  
+                   
+                 </div>
+               </div>
+               </li>
+                <%}else{%>
+                  <li class="nav-item active">
+                    <a style="color: white; text-decoration: none;" href="/kayit">
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter1">
+                          Kayıt Ol
+                      </button>
+                  </a>
+                  </li>
+                  <li>
+                    <a style="color: white; text-decoration: none;" href="/oturumAc"> 
+                        <button type="button" class="btn btn-primary ml-2 " data-toggle="modal" data-target="#exampleModalCenter">
+                         Oturum Aç
+                    </button></a> 
+                  </li>
+                    <%}%>
+            </ul>
+          </div>
+        </nav>
+  
+        <div class="container-fluid">
+          <div class="row mt-5">
+            <div class="col-md-6 m-auto">
+              <div class="card card-body">
+                <h1 class="text-center mb-3">
+                  <i style="color: chartreuse;" class="fas fa-user-plus"></i> Çalışan Kayıt
+                </h1>
+              
+    
+                <form action="" method="POST">
+                  <div class="form-group">
+                    <label for="name">Çalışan Adı</label>
+                    <input
+                      type="name"
+                      id="name"
+                      name="name"
+                      class="form-control"
+                      placeholder="Çalışan Adı"
+                      value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="bolum">Pozisyon</label>
+                    <input
+                      type="text"
+                      id="bolum"
+                      name="bolum"
+                      class="form-control"
+                      placeholder="Pozisyon Giriniz"
+                      value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="form-control"
+                      placeholder="Email Giriniz "
+                      value="<%= typeof email != 'undefined' ? email : '' %>"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input
+                      type="password"
+                      id="pass"
+                      name="pass"
+                      class="form-control"
+                      placeholder="Şifre Giriniz"
+                      value="<%= typeof name != 'undefined' ? name : '' %>"
+                    />
+                  </div>
+                 
+                  
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Kaydet
+                      </button>
+                 
+    
+                  
+                </form>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+  
+    
+    <!-- /#sidebar-wrapper -->
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+      
+</body>
+</html>

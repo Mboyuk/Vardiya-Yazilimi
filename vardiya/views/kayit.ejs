@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetici Kayıt</title>
+
+    <link rel="stylesheet"  href="giris.css">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+
+
+</head>
+<body>
+  
+ 
+  <%- include("./inc/navbar");%>
+ 
+
+        <div style="width: 100%;" class="row mt-5">
+          <div class="col-md-6 m-auto">
+            <div class="card">
+              <h1 style="text-align: center; color: rgb(8, 8, 99);">Yönetici</h1>
+            </div>
+
+            <div class="card card-body">
+              <h1 class="text-center mb-3">
+                <i style="color: rgb(66, 66, 240);" class="fas fa-user-plus"></i> Kayıt Ol
+              </h1>
+              <%- include('partials/messages'); %>
+                
+              <form action="kayit" method="POST">
+                <div class="form-group">
+                  <label for="name">İsim</label>
+                  <input
+                    type="name"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="İsim Giriniz"
+                    value="<%= typeof name != 'undefined' ? name : '' %>"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Email Giriniz"
+                    value="<%= typeof email != 'undefined' ? email : '' %>"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Şifre</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="Şifre Giriniz"
+                    value="<%= typeof password != 'undefined' ? password : '' %>"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password2">Şifre Onay</label>
+                  <input
+                    type="password"
+                    id="password2"
+                    name="password2"
+                    class="form-control"
+                    placeholder="Şifrenizi onaylayın"
+                    value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+                  />
+                </div>
+                
+                  <button type="submit" class="btn btn-primary btn-block">
+                    Kayıt Ol
+                  </button>
+                
+                
+              </form>
+              <p class="lead mt-4">Zaten bir hesabınız var mı? <a href="oturumAc">Oturum Aç</a></p>
+            </div>
+          </div>
+        </div>
+        
+      
+
+       
+     
+
+      
+    <!-- /#page-content-wrapper -->
+
+  </div>
+ 
+
+  
+
+    <!-- <form action="kayit" method="POST">
+        <div class="container">
+            <div class="form-group">
+                <label >name</label>
+                <input type="text" name="name" class="form-control" id="exampletext" aria-describedby="emailHelp" placeholder="Enter name">
+               
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+        </div>  
+    </form> -->
+      
+       
+       
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script>
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+      </script>
+    
+
+</body>
+</html>

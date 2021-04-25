@@ -1,0 +1,55 @@
+
+.nav1{
+    background-color: #3F4962;
+}
+.section1img img{
+    height: 30em;
+   
+}
+.kullaniciTable{
+    margin-top: 100px;
+}
+.kullaniciTable table{
+    background-color: #3F4962;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing:1px ;
+    
+  }
+  .kullaniciTable thead tr{
+    background-color: #F8C150 ;
+    color: white;
+  }
+  .kullaniciTable tbody tr:hover{
+    background-color: #F8C150 ;
+    color: black;
+    
+  }
+.kenarBorder{
+    border-radius: 50px !important;
+}
+/* .section1yazi{
+    
+   
+    text-align: center;
+} */
+.solResim{
+    margin-top: 4em;
+
+
+}
+.sagYazi{
+    margin-top: 45%;
+    
+}
+.margin-10{
+    margin-top: 10em;
+}
+.ortala{
+    text-align: center;
+}
+.dikeyOrtala{
+    margin-top: 22%;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oturum ac</title>
+
+
+    <link rel="stylesheet"  href="giris.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+
+
+</head>
+<body>
+  <%- include("./inc/navbar");%>
+  
+
+  <div class="row mt-5">
+    <div class="col-md-4 m-auto">
+      <div class="card ">
+        <h1 style="text-align: center; color: rgb(8, 8, 99);">Yönetici</h1>
+      </div>
+      <div class="card card-body">
+        <h1 class="text-center mb-3"><i style="color: rgb(13, 194, 13);" class="fas fa-sign-in-alt"></i>  Oturum Aç</h1>
+        <%- include('partials/messages'); %>
+        <form action="oturumAc" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Email Giriniz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Şifre</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Şifre Giriniz"
+            />
+          </div>
+          <a href="yonetici">
+            <button type="submit" class="btn btn-primary btn-block">Oturum Aç</button>
+          </a>
+         
+        </form>
+        <p class="lead mt-4">
+          Hesabınız yok mu? <a href="kayit">Kaydol</a>
+        </p>
+        <a href="kullaniciOturum">Kullanıcı girişi</a>
+      </div>
+     
+      
+    
+    </div>
+    
+    <!-- kullanici girisi -->
+    
+  
+  
+
+    <!-- <form action="oturumAc" method="POST">
+        <div class="container">
+            <div class="form-group">
+                <label >name</label>
+                <input type="text" name="name" class="form-control" id="exampletext" aria-describedby="emailHelp" placeholder="Enter name">
+               
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              
+              <button type="submit" class="btn btn-primary">Oturum Ac</button>
+        </div>  
+    </form>
+       -->
+       
+       
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+
+</body>
+</html>
